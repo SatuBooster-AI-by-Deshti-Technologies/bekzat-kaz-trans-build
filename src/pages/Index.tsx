@@ -7,13 +7,13 @@ import PortfolioSection from "@/components/PortfolioSection";
 import PartnersSection from "@/components/PartnersSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import ColorThemeSwitcher from "@/components/ColorThemeSwitcher";
+
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <ColorThemeSwitcher />
+      
       
       <main>
         <section id="hero">

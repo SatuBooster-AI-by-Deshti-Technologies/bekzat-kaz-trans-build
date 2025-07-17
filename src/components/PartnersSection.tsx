@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
+import biGroupLogo from '@/assets/bi-group-logo.png';
 
 const partners = [
   {
@@ -21,20 +22,22 @@ const PartnersSection = () => {
           </p>
         </div>
         
-        <div className="flex justify-center">{" "}
+        <div className="flex justify-center">
           {partners.map((partner, index) => (
-            <Card key={index} className="p-6 text-center hover:shadow-construction transition-all duration-300 group">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-gradient-primary rounded-lg mx-auto flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-white">
-                    {partner.name.substring(0, 2)}
-                  </span>
+            <Card key={index} className="p-8 text-center hover:shadow-construction transition-all duration-300 group max-w-sm">
+              <div className="mb-6">
+                <div className="w-24 h-24 bg-white rounded-lg mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
+                  <img 
+                    src={biGroupLogo} 
+                    alt="BI Group Logo" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
-              <h3 className="font-semibold text-sm mb-2 text-foreground leading-tight">
+              <h3 className="font-semibold text-lg mb-2 text-foreground">
                 {partner.name}
               </h3>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 {partner.description}
               </p>
             </Card>

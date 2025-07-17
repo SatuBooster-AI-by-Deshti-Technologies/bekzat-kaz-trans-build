@@ -37,7 +37,7 @@ const HeroSection = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-2 border-white/80 text-white hover:bg-white hover:text-foreground px-8 py-4 text-lg transition-all duration-300"
+            className="border-2 border-white/80 text-white bg-white/10 hover:bg-white hover:text-foreground px-8 py-4 text-lg transition-all duration-300"
           >
             Узнать больше
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -46,7 +46,7 @@ const HeroSection = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl font-bold mb-1">15+</div>
+            <div className="text-2xl font-bold mb-1">11+</div>
             <div className="text-sm">Лет опыта</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -58,8 +58,8 @@ const HeroSection = () => {
             <div className="text-sm">Проектов</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl font-bold mb-1">24/7</div>
-            <div className="text-sm">Поддержка</div>
+            <div className="text-2xl font-bold mb-1">100%</div>
+            <div className="text-sm">Качество</div>
           </div>
         </div>
       </div>

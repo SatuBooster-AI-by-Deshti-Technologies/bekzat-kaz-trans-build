@@ -78,10 +78,15 @@ const ServicesSection = () => {
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {service.title}
-                </h3>
+               <CardContent className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-foreground">
+                    {service.title}
+                  </h3>
+                  <Badge variant="secondary" className="text-xs">
+                    Популярная услуга
+                  </Badge>
+                </div>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {service.description}
                 </p>

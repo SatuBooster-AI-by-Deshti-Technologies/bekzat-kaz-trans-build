@@ -4,18 +4,13 @@ import { Building, GraduationCap, Hospital } from "lucide-react";
 const projects = [
   {
     icon: Hospital,
-    title: "Госпиталь",
-    category: "Медицинское учреждение"
+    title: "Инфекционный госпиталь",
+    category: "Специализированная клиника COVID-19"
   },
   {
     icon: Hospital,
-    title: "Госпиталь",
-    category: "Медицинское учреждение"
-  },
-  {
-    icon: Hospital,
-    title: "Туркестан госпиталь",
-    category: "Медицинское учреждение"
+    title: "Модульный инфекционный госпиталь в Туркестане",
+    category: "Модульное медицинское учреждение"
   },
   {
     icon: GraduationCap,
@@ -29,17 +24,27 @@ const projects = [
   },
   {
     icon: GraduationCap,
-    title: "Школа Кемертоган, Каскелен, Узынагаш",
-    category: "Образовательные учреждения"
+    title: "Школа Кемертоган",
+    category: "Образовательное учреждение"
   },
   {
     icon: GraduationCap,
-    title: "НИШ Алатауский",
+    title: "Школа Каскелен",
+    category: "Образовательное учреждение"
+  },
+  {
+    icon: GraduationCap,
+    title: "Школа Узынагаш",
+    category: "Образовательное учреждение"
+  },
+  {
+    icon: GraduationCap,
+    title: "НИШ Алатауский (Алатауский район)",
     category: "Назарбаев Интеллектуальная школа"
   },
   {
     icon: GraduationCap,
-    title: "НИШ Наурызбайский",
+    title: "НИШ Наурызбайский (Наурызбайский район)",
     category: "Назарбаев Интеллектуальная школа"
   }
 ];
@@ -57,7 +62,7 @@ const PortfolioSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-construction transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-6 text-center">
