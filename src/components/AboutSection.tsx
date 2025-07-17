@@ -54,7 +54,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Наши специалисты имеют все необходимые лицензии и сертификаты, 
-                а техника регулярно проходит техническое обслуживание. Мы гордимся тем, 
+                техника регулярно проходит техническое обслуживание. Мы гордимся тем, 
                 что реализуем проекты качественно и в срок, помогая создавать прочную и 
                 надёжную инфраструктуру.
               </p>
@@ -62,7 +62,7 @@ const AboutSection = () => {
             
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="text-center p-4 bg-primary/10 rounded-lg">
-                <div className="text-2xl font-bold text-primary mb-1">15+</div>
+                <div className="text-2xl font-bold text-primary mb-1">11+</div>
                 <div className="text-sm text-muted-foreground">Лет на рынке</div>
               </div>
               <div className="text-center p-4 bg-accent/10 rounded-lg">

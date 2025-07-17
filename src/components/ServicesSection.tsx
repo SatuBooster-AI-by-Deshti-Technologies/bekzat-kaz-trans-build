@@ -10,29 +10,43 @@ const services = [
     icon: Shovel,
     title: "Разработка котлованов",
     description: "Выполняем разработку котлованов под жилые, промышленные и коммерческие объекты с использованием современной спецтехники.",
-    features: ["Глубина до 15 м", "Укрепление грунта", "Вывоз грунта"],
     image: excavatorImage
   },
   {
     icon: Construction,
     title: "Асфальтирование дорог",
     description: "Полный цикл работ по укладке асфальта - от подготовки основания до финального покрытия.",
-    features: ["Дороги и парковки", "Качественные материалы", "Современная техника"],
     image: roadImage
   },
   {
     icon: Mountain,
     title: "Земельные работы",
     description: "Планировка, выемка и отсыпка грунта. Подготовка участков для строительства.",
-    features: ["Выравнивание территории", "Укрепление склонов", "Отсыпка материалами"],
     image: earthworkImage
   },
   {
     icon: TreePine,
     title: "Благоустройство территорий",
     description: "Создание комфортных городских пространств, укладка тротуаров, озеленение.",
-    features: ["Брусчатка и бордюры", "Озеленение", "Парки и аллеи"],
     image: earthworkImage
+  },
+  {
+    icon: Construction,
+    title: "Водопровод",
+    description: "Прокладка и монтаж водопроводных сетей для жилых и коммерческих объектов.",
+    image: roadImage
+  },
+  {
+    icon: Mountain,
+    title: "Канализация",
+    description: "Устройство канализационных систем и сетей различной сложности.",
+    image: earthworkImage
+  },
+  {
+    icon: Shovel,
+    title: "Наружные сети",
+    description: "Прокладка наружных инженерных сетей: электричество, газ, связь.",
+    image: excavatorImage
   }
 ];
 
@@ -71,13 +85,6 @@ const ServicesSection = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {service.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, idx) => (
-                    <Badge key={idx} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground">
-                      {feature}
-                    </Badge>
-                  ))}
-                </div>
               </CardContent>
             </Card>
           ))}

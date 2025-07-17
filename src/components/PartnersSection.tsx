@@ -3,28 +3,8 @@ import { Card } from '@/components/ui/card';
 
 const partners = [
   {
-    name: 'ТОО "СтройГрад"',
-    description: 'Генеральный подрядчик',
-  },
-  {
-    name: 'КазАвтоДор',
-    description: 'Дорожное строительство',
-  },
-  {
-    name: 'НурСултан Девелопмент',
-    description: 'Жилищное строительство',
-  },
-  {
-    name: 'АрхиСтрой ЛТД',
-    description: 'Коммерческие объекты',
-  },
-  {
-    name: 'КазИнфраСтрой',
-    description: 'Инфраструктурные проекты',
-  },
-  {
-    name: 'ЕвразияСтрой',
-    description: 'Промышленное строительство',
+    name: 'BI Group',
+    description: 'Стратегический партнер',
   },
 ];
 
@@ -41,7 +21,7 @@ const PartnersSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="flex justify-center">{" "}
           {partners.map((partner, index) => (
             <Card key={index} className="p-6 text-center hover:shadow-construction transition-all duration-300 group">
               <div className="mb-4">
