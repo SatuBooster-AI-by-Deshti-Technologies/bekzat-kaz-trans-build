@@ -6,21 +6,21 @@ const videos = [
   {
     id: "1",
     title: "Земельные работы - Экскавация котлована",
-    thumbnail: "/placeholder.svg",
+    thumbnail: "/cat1.mp4",
     videoUrl: "#",
     description: "Профессиональная разработка котлованов под фундамент"
   },
   {
     id: "2", 
     title: "Асфальтирование дороги",
-    thumbnail: "/placeholder.svg",
+    thumbnail: "/cat2.mp4",
     videoUrl: "#",
     description: "Качественная укладка асфальтобетонного покрытия"
   },
   {
     id: "3",
     title: "Прокладка водопровода",
-    thumbnail: "/placeholder.svg", 
+    thumbnail: "/cat3.mp4", 
     videoUrl: "#",
     description: "Монтаж современных водопроводных систем"
   },
