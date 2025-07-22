@@ -32,12 +32,7 @@ const ContactSection = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Контакты
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Свяжитесь с нами для получения консультации и расчета стоимости работ
-          </p>
+
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">          
@@ -67,25 +62,7 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
             ))}
-            
-            {/* CTA Card */}
-            <Card className="bg-gradient-primary text-primary-foreground shadow-construction">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">
-                  Готовы начать ваш проект?
-                </h3>
-                <p className="mb-6 opacity-90">
-                  Получите бесплатную консультацию и расчет стоимости работ
-                </p>
-                <Button 
-                  variant="outline" 
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                >
-                  <Phone className="mr-2 h-4 w-4" />
-                  Позвонить сейчас
-                </Button>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </div>
