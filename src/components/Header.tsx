@@ -75,7 +75,7 @@ const Header = () => {
               ))}
               <Button className="w-full mt-4 bg-primary hover:bg-primary-glow text-primary-foreground">
                 <Phone className="mr-2 h-4 w-4" />
-                +7 (777) 123-45-67
+                +7 (707) 111-74-25
               </Button>
             </nav>
           </div>

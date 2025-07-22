@@ -8,14 +8,14 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold text-accent mb-4">
-              BEKZAT KAZ TRANS SERVICE
+              BEKZAT KAZ TRANS SERVISE
             </h3>
             <p className="text-background/80 mb-4 leading-relaxed">
               Профессиональные строительные работы любой сложности с использованием 
               современной техники по всему Казахстану.
             </p>
             <div className="text-sm text-background/60">
-              © 2024 BEKZAT KAZ TRANS SERVICE
+              © 2025 Deshti Technologies
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                 <div className="text-background/80 text-sm">
-                  г. Алматы, ул. Строительная 1<br />
+                  г. Алматы, ул. Райымбек 375Д<br />
                   Казахстан
                 </div>
               </div>
@@ -58,22 +58,22 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-accent flex-shrink-0" />
                 <div className="text-background/80 text-sm">
-                  +7 (777) 123-45-67
+                  +7 (707) 111-74-25
                 </div>
               </div>
               
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
                 <div className="text-background/80 text-sm">
-                  info@bekzatkts.kz
+                  office@deshti.kz
                 </div>
               </div>
               
               <div className="flex items-start gap-2">
                 <Clock className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
                 <div className="text-background/80 text-sm">
-                  Пн-Пт: 8:00 - 18:00<br />
-                  Сб: 9:00 - 15:00
+                  Пн-Пт: 8:00 - 22:00<br />
+                  Сб: 8:00 - 22:00
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-background/60 text-sm">
-              Все права защищены. Лицензия на строительные работы № 123456789
+              Все права защищены.
             </div>
             <div className="text-background/60 text-sm">
               Работаем по всему Казахстану
