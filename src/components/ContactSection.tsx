@@ -40,63 +40,7 @@ const ContactSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="shadow-card-custom">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground">
-                Оставить заявку
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Имя *
-                  </label>
-                  <Input placeholder="Ваше имя" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Телефон *
-                  </label>
-                  <Input placeholder="+7 (___) ___-__-__" />
-                </div>
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email
-                </label>
-                <Input type="email" placeholder="your@email.com" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Услуга
-                </label>
-                <Input placeholder="Какая услуга вас интересует?" />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Сообщение
-                </label>
-                <Textarea 
-                  placeholder="Опишите ваш проект подробнее..."
-                  className="min-h-[120px]"
-                />
-              </div>
-              
-              <Button className="w-full bg-primary hover:bg-primary-glow text-primary-foreground shadow-construction">
-                Отправить заявку
-              </Button>
-              
-              <p className="text-xs text-muted-foreground text-center">
-                Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-              </p>
-            </CardContent>
-          </Card>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">          
           
           {/* Contact Information */}
           <div className="space-y-6">
