@@ -47,7 +47,7 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p className="text-lg">
-                Компания <span className="font-semibold text-primary">BEKZAT KAZ TRANS SERVICE</span> – 
+                Компания <span className="font-semibold text-primary">BEKZAT KAZ TRANS SERVISE</span> – 
                 это команда профессионалов с многолетним опытом в строительной сфере. 
                 Мы выполняем работы любой сложности, используя надёжную спецтехнику и 
                 проверенные технологии.

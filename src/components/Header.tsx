@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-xl font-bold text-primary">
-              BEKZAT KAZ TRANS SERVICE
+              BEKZAT KAZ TRANS SERVISE
             </h1>
           </div>
 
@@ -40,10 +40,10 @@ const Header = () => {
 
           {/* Contact Button */}
           <div className="hidden lg:flex items-center">
-            <Button className="bg-primary hover:bg-primary-glow text-primary-foreground shadow-construction">
+            <a href="tel:+77071117425" className="bg-primary hover:bg-primary-glow text-primary-foreground shadow-construction px-4 py-2 rounded-md font-medium transition-colors duration-200 flex items-center">
               <Phone className="mr-2 h-4 w-4" />
-              +7 (777) 123-45-67
-            </Button>
+              +7 707 111 74 25
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

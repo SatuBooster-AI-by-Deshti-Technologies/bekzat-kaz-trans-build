@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           <span className="block">BEKZAT KAZ</span>
-          <span className="block text-accent">TRANS SERVICE</span>
+          <span className="block text-accent">TRANS SERVISE</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -26,22 +26,23 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary-glow text-primary-foreground px-8 py-4 text-lg shadow-construction transition-all duration-300 hover:scale-105"
+          <a 
+            href="tel:+77071117425"
+            className="bg-primary hover:bg-primary-glow text-primary-foreground px-8 py-4 text-lg shadow-construction transition-all duration-300 hover:scale-105 rounded-lg font-medium flex items-center"
           >
             <Phone className="mr-2 h-5 w-5" />
             Заказать консультацию
-          </Button>
+          </a>
           
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-2 border-white/80 text-white bg-white/10 hover:bg-white hover:text-foreground px-8 py-4 text-lg transition-all duration-300"
+          <a 
+            href="https://wa.link/gkiud2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="border-2 border-white/80 text-white bg-white/10 hover:bg-white hover:text-foreground px-8 py-4 text-lg transition-all duration-300 rounded-lg font-medium flex items-center"
           >
             Узнать больше
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          </a>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">

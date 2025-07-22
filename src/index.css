@@ -15,10 +15,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Industrial orange theme for construction company */
-    --primary: 24 100% 50%;
+    /* Green theme for construction company */
+    --primary: 120 100% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 33 100% 60%;
+    --primary-glow: 120 80% 30%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -26,7 +26,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 45 100% 60%;
+    --accent: 120 60% 35%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,15 +34,15 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 24 100% 50%;
+    --ring: 120 100% 25%;
 
-    /* Beautiful gradients for construction theme */
+    /* Beautiful gradients for green construction theme */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(24 100% 50% / 0.9), hsl(33 100% 60% / 0.8));
+    --gradient-hero: linear-gradient(135deg, hsl(120 100% 25% / 0.9), hsl(120 80% 30% / 0.8));
     --gradient-section: linear-gradient(180deg, hsl(0 0% 99%), hsl(210 40% 98%));
 
-    /* Shadows with construction theme */
-    --shadow-construction: 0 10px 30px -10px hsl(24 100% 50% / 0.3);
+    /* Shadows with green construction theme */
+    --shadow-construction: 0 10px 30px -10px hsl(120 100% 25% / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(222.2 84% 4.9% / 0.1);
 
     --radius: 0.75rem;
