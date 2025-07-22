@@ -42,6 +42,51 @@ const ContactSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">          
           
+          {/* Contact Information */}
+          <div className="space-y-6">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="hover:shadow-card-custom transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                      <info.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">
+                        {info.title}
+                      </h3>
+                      <div className="space-y-1">
+                        {info.details.map((detail, idx) => (
+                          <p key={idx} className="text-muted-foreground">
+                            {detail}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+            
+            {/* CTA Card */}
+            <Card className="bg-gradient-primary text-primary-foreground shadow-construction">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-4">
+                  Готовы начать ваш проект?
+                </h3>
+                <p className="mb-6 opacity-90">
+                  Получите бесплатную консультацию и расчет стоимости работ
+                </p>
+                <Button 
+                  variant="outline" 
+                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                >
+                  <Phone className="mr-2 h-4 w-4" />
+                  Позвонить сейчас
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
