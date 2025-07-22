@@ -3,7 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Shovel, Construction, Mountain, TreePine } from "lucide-react";
 import excavatorImage from "@/assets/excavator.jpg";
 import roadImage from "@/assets/road-construction.jpg";
-import earthworkImage from "@/assets/earthwork.jpg";
+import earthworkImage from "@/assets/earthworks-new.jpg";
+import landscapingImage from "@/assets/landscaping.jpg";
+import waterSupplyImage from "@/assets/water-supply.jpg";
+import sewerageImage from "@/assets/sewerage.jpg";
+import externalNetworksImage from "@/assets/external-networks.jpg";
 
 const services = [
   {
@@ -28,25 +32,25 @@ const services = [
     icon: TreePine,
     title: "Благоустройство территорий",
     description: "Создание комфортных городских пространств, укладка тротуаров, озеленение.",
-    image: earthworkImage
+    image: landscapingImage
   },
   {
     icon: Construction,
     title: "Водопровод",
     description: "Прокладка и монтаж водопроводных сетей для жилых и коммерческих объектов.",
-    image: roadImage
+    image: waterSupplyImage
   },
   {
     icon: Mountain,
     title: "Канализация",
     description: "Устройство канализационных систем и сетей различной сложности.",
-    image: earthworkImage
+    image: sewerageImage
   },
   {
     icon: Shovel,
     title: "Наружные сети",
     description: "Прокладка наружных инженерных сетей: электричество, газ, связь.",
-    image: excavatorImage
+    image: externalNetworksImage
   }
 ];
 
