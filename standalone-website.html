@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEKZAT KAZ TRANS SERVICE - Строительные работы любой сложности</title>
-    <meta name="description" content="BEKZAT KAZ TRANS SERVICE - строительные работы, разработка котлованов, асфальтирование дорог, земельные работы. 11+ лет опыта.">
+    <title>BEKZAT KAZ TRANS SERVISE - Строительные работы любой сложности</title>
+    <meta name="description" content="BEKZAT KAZ TRANS SERVISE - строительные работы, разработка котлованов, асфальтирование дорог, земельные работы. 11+ лет опыта.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,9 +19,9 @@
     
     <style>
         :root {
-            --primary: 24 100% 50%;
-            --primary-glow: 33 100% 60%;
-            --accent: 45 100% 60%;
+            --primary: 120 100% 25%;
+            --primary-glow: 120 80% 30%;
+            --accent: 120 60% 35%;
             --background: 0 0% 100%;
             --foreground: 222.2 84% 4.9%;
             --muted: 210 40% 98%;
@@ -29,10 +29,10 @@
             --border: 214.3 31.8% 91.4%;
             --primary-foreground: 210 40% 98%;
             
-            --gradient-primary: linear-gradient(135deg, hsl(24 100% 50%), hsl(33 100% 60%));
-            --gradient-hero: linear-gradient(135deg, hsl(24 100% 50% / 0.9), hsl(33 100% 60% / 0.8));
+            --gradient-primary: linear-gradient(135deg, hsl(120 100% 25%), hsl(120 80% 30%));
+            --gradient-hero: linear-gradient(135deg, hsl(120 100% 25% / 0.9), hsl(120 80% 30% / 0.8));
             --gradient-section: linear-gradient(180deg, hsl(210 40% 98%), hsl(220 14% 96%));
-            --shadow-construction: 0 10px 30px -10px hsl(24 100% 50% / 0.3);
+            --shadow-construction: 0 10px 30px -10px hsl(120 100% 25% / 0.3);
         }
         
         * {
@@ -70,7 +70,7 @@
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px -10px hsl(24 100% 50% / 0.4);
+            box-shadow: 0 15px 40px -10px hsl(120 100% 25% / 0.4);
         }
         
         .btn-outline {
@@ -107,7 +107,7 @@
         }
         
         .hero {
-            background: linear-gradient(var(--gradient-hero)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23374151" width="1200" height="800"/><path fill="%23FFA500" d="M300 400h200v100H300z"/><path fill="%23FF8C00" d="M600 350h150v150H600z"/><circle fill="%23FF7F00" cx="900" cy="400" r="80"/></svg>');
+            background: linear-gradient(var(--gradient-hero)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2322c55e" width="1200" height="800"/><path fill="%23059669" d="M300 400h200v100H300z"/><path fill="%23047857" d="M600 350h150v150H600z"/><circle fill="%23065f46" cx="900" cy="400" r="80"/></svg>');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -157,6 +157,49 @@
             height: 2rem;
             color: hsl(var(--primary));
         }
+
+        .carousel {
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 500%;
+        }
+
+        .carousel-slide {
+            width: 20%;
+            flex-shrink: 0;
+        }
+
+        .carousel-video {
+            width: 100%;
+            height: 300px;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .carousel-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background: hsl(var(--muted));
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: hsl(var(--primary));
+        }
         
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
@@ -171,13 +214,14 @@
     <header style="position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid hsl(var(--border));">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem;">
             <div style="font-size: 1.5rem; font-weight: 800; color: hsl(var(--primary));">
-                BEKZAT KAZ TRANS SERVICE
+                BEKZAT KAZ TRANS SERVISE
             </div>
             <nav style="display: flex; gap: 2rem;">
                 <a href="#about" style="text-decoration: none; color: hsl(var(--foreground)); font-weight: 500;">О нас</a>
                 <a href="#services" style="text-decoration: none; color: hsl(var(--foreground)); font-weight: 500;">Услуги</a>
                 <a href="#equipment" style="text-decoration: none; color: hsl(var(--foreground)); font-weight: 500;">Техника</a>
                 <a href="#portfolio" style="text-decoration: none; color: hsl(var(--foreground)); font-weight: 500;">Объекты</a>
+                <a href="#videos" style="text-decoration: none; color: hsl(var(--foreground)); font-weight: 500;">Наши работы</a>
                 <a href="#contacts" style="text-decoration: none; color: hsl(var(--foreground)); font-weight: 500;">Контакты</a>
             </nav>
         </div>
@@ -188,17 +232,17 @@
         <div class="container">
             <h1>
                 <span style="display: block;">BEKZAT KAZ</span>
-                <span style="display: block; color: hsl(var(--accent));">TRANS SERVICE</span>
+                <span style="display: block; color: hsl(var(--accent));">TRANS SERVISE</span>
             </h1>
             <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                 Строительные работы любой сложности с использованием современной техники
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-                <a href="#contacts" class="btn-primary">
+                <a href="tel:+77071117425" class="btn-primary">
                     <i data-lucide="phone"></i>
                     Заказать консультацию
                 </a>
-                <a href="#about" class="btn-outline" style="border-color: white; color: white;">
+                <a href="https://wa.link/gkiud2" class="btn-outline" style="border-color: white; color: white;" target="_blank">
                     Узнать больше
                     <i data-lucide="arrow-right"></i>
                 </a>
@@ -232,7 +276,7 @@
                     <h2>О компании</h2>
                     <div style="margin-bottom: 1.5rem;">
                         <p style="font-size: 1.125rem; margin-bottom: 1.5rem; color: hsl(var(--muted-foreground));">
-                            Компания <span style="font-weight: 600; color: hsl(var(--primary));">BEKZAT KAZ TRANS SERVICE</span> – 
+                            Компания <span style="font-weight: 600; color: hsl(var(--primary));">BEKZAT KAZ TRANS SERVISE</span> – 
                             это команда профессионалов с многолетним опытом в строительной сфере. 
                             Мы выполняем работы любой сложности, используя надёжную спецтехнику и 
                             проверенные технологии.
@@ -254,7 +298,7 @@
                             <div style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Минимальный срок</div>
                         </div>
                     </div>
-                    <a href="#contacts" class="btn-primary">Получить консультацию</a>
+                    <a href="tel:+77071117425" class="btn-primary">Получить консультацию</a>
                 </div>
                 <div class="grid grid-2" style="gap: 1rem;">
                     <div class="card text-center">
@@ -301,72 +345,86 @@
             </div>
             <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto;">
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #f59e0b, #f97316); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="shovel" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1581094287973-00d5842c7711?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="shovel" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Разработка котлованов</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Земляные работы</span>
                     </div>
                     <p class="text-muted">Выполняем разработку котлованов под жилые, промышленные и коммерческие объекты с использованием современной спецтехники.</p>
                 </div>
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #374151, #6b7280); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="construction" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1589623003415-6e9c7b8b6c6c?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="construction" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Асфальтирование дорог</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Дорожные работы</span>
                     </div>
                     <p class="text-muted">Полный цикл работ по укладке асфальта - от подготовки основания до финального покрытия.</p>
                 </div>
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #059669, #10b981); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="mountain" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="mountain" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Земельные работы</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Планировка</span>
                     </div>
                     <p class="text-muted">Планировка, выемка и отсыпка грунта. Подготовка участков для строительства.</p>
                 </div>
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #7c3aed, #a855f7); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="tree-pine" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="tree-pine" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Благоустройство территорий</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Озеленение</span>
                     </div>
                     <p class="text-muted">Создание комфортных городских пространств, укладка тротуаров, озеленение.</p>
                 </div>
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #1e40af, #3b82f6); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="droplets" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1558618047-30c2f3dc5a47?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="droplets" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Водопровод</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Инженерные сети</span>
                     </div>
                     <p class="text-muted">Прокладка и монтаж водопроводных сетей для жилых и коммерческих объектов.</p>
                 </div>
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #dc2626, #ef4444); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="waves" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="waves" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Канализация</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Инженерные сети</span>
                     </div>
                     <p class="text-muted">Устройство канализационных систем и сетей различной сложности.</p>
                 </div>
                 <div class="card">
-                    <div style="height: 200px; background: linear-gradient(45deg, #0891b2, #06b6d4); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="zap" style="width: 3rem; height: 3rem; color: white;"></i>
+                    <div style="height: 200px; background: url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <i data-lucide="cable" style="width: 2rem; height: 2rem; color: hsl(var(--accent));"></i>
+                        </div>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                         <h3>Наружные сети</h3>
-                        <span class="badge">Популярная услуга</span>
+                        <span class="badge">Коммуникации</span>
                     </div>
                     <p class="text-muted">Прокладка наружных инженерных сетей: электричество, газ, связь.</p>
                 </div>
@@ -380,49 +438,30 @@
             <div class="text-center" style="margin-bottom: 4rem;">
                 <h2>Наша техника</h2>
                 <p style="font-size: 1.25rem; color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">
-                    Современный парк строительной техники для выполнения работ любой сложности
+                    Собственный парк из 50+ единиц современной строительной техники
                 </p>
             </div>
-            <div class="grid grid-3">
+            <div class="grid grid-3" style="max-width: 1000px; margin: 0 auto;">
                 <div class="card text-center">
                     <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
-                        <i data-lucide="construction" style="width: 2.5rem; height: 2.5rem; color: hsl(var(--primary));"></i>
+                        <i data-lucide="truck" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
                     </div>
-                    <h3>Экскаваторы</h3>
-                    <p class="text-muted" style="margin-bottom: 1rem;">Для земельных работ и разработки котлованов</p>
-                    <ul style="text-align: left; color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
-                        <li>• Экскаватор Гусеничный Doosan 360</li>
-                        <li>• Экскаватор колесный Hitachi W180</li>
-                        <li>• Экскаватор колесный W140</li>
-                        <li>• 3 в 1 Погрузчик-экскаватор 2014г</li>
-                    </ul>
+                    <h3 style="font-size: 1.125rem;">Экскаваторы</h3>
+                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Современные экскаваторы различной мощности</p>
                 </div>
                 <div class="card text-center">
                     <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
-                        <i data-lucide="truck" style="width: 2.5rem; height: 2.5rem; color: hsl(var(--primary));"></i>
+                        <i data-lucide="construction" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
                     </div>
-                    <h3>Грузовая техника</h3>
-                    <p class="text-muted" style="margin-bottom: 1rem;">Для перевозки материалов и оборудования</p>
-                    <ul style="text-align: left; color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
-                        <li>• КАМАЗ самосвал 65115 3шт 15т</li>
-                        <li>• Шахман 4шт 20-23г</li>
-                        <li>• Трал Mercedes 40т</li>
-                    </ul>
+                    <h3 style="font-size: 1.125rem;">Бульдозеры</h3>
+                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Мощные бульдозеры для земляных работ</p>
                 </div>
                 <div class="card text-center">
                     <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
-                        <i data-lucide="settings" style="width: 2.5rem; height: 2.5rem; color: hsl(var(--primary));"></i>
+                        <i data-lucide="crane" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
                     </div>
-                    <h3>Специальная техника</h3>
-                    <p class="text-muted" style="margin-bottom: 1rem;">Для специализированных работ</p>
-                    <ul style="text-align: left; color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
-                        <li>• Кран грузовой 25т 3шт 20-21г</li>
-                        <li>• Кран SANY 25т</li>
-                        <li>• Грунтовый каток 16т, 20-23г</li>
-                        <li>• Погрузчик 3 куб 2шт 20-24г</li>
-                        <li>• Погрузчик 2 куб 2шт 20-21г</li>
-                        <li>• Воздушный компрессор M50 Kaeser</li>
-                    </ul>
+                    <h3 style="font-size: 1.125rem;">Краны</h3>
+                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Автокраны различной грузоподъемности</p>
                 </div>
             </div>
         </div>
@@ -442,29 +481,15 @@
                     <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
                         <i data-lucide="hospital" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
                     </div>
-                    <h3 style="font-size: 1.125rem;">Инфекционный госпиталь</h3>
-                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Специализированная клиника COVID-19</p>
+                    <h3 style="font-size: 1.125rem;">Инфекционная больница (COVID)</h3>
+                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Специализированное медицинское учреждение</p>
                 </div>
                 <div class="card text-center">
                     <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
                         <i data-lucide="hospital" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
                     </div>
-                    <h3 style="font-size: 1.125rem;">Модульный инфекционный госпиталь в Туркестане</h3>
-                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Модульное медицинское учреждение</p>
-                </div>
-                <div class="card text-center">
-                    <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
-                        <i data-lucide="graduation-cap" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
-                    </div>
-                    <h3 style="font-size: 1.125rem;">Школа Дархан</h3>
-                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Образовательное учреждение</p>
-                </div>
-                <div class="card text-center">
-                    <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
-                        <i data-lucide="building" style="width: 2rem; height: 2rem; color: hsl(var(--primary));"></i>
-                    </div>
-                    <h3 style="font-size: 1.125rem;">КБТУ</h3>
-                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Университет</p>
+                    <h3 style="font-size: 1.125rem;">Госпиталь в Туркестане</h3>
+                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Модульная инфекционная больница</p>
                 </div>
                 <div class="card text-center">
                     <div style="margin: 0 auto 1rem; padding: 1rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; width: fit-content;">
@@ -502,151 +527,181 @@
                     <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Назарбаев Интеллектуальная школа</p>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 3rem;">
-                <p class="text-muted">
-                    Более <span style="font-weight: 700; color: hsl(var(--primary));">50+ успешных проектов</span> реализовано за 11+ лет работы
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2>Наши работы</h2>
+                <p style="font-size: 1.25rem; color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">
+                    Смотрите видео наших выполненных работ
                 </p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="carousel" id="videoCarousel">
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="carousel-slide">
+                            <video class="carousel-video" controls poster="https://images.unsplash.com/photo-1581094287973-00d5842c7711?auto=format&fit=crop&w=800&q=80">
+                                <source src="#" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <h3 style="text-align: center; margin-top: 1rem;">Разработка котлованов</h3>
+                        </div>
+                        <div class="carousel-slide">
+                            <video class="carousel-video" controls poster="https://images.unsplash.com/photo-1589623003415-6e9c7b8b6c6c?auto=format&fit=crop&w=800&q=80">
+                                <source src="#" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <h3 style="text-align: center; margin-top: 1rem;">Асфальтирование дорог</h3>
+                        </div>
+                        <div class="carousel-slide">
+                            <video class="carousel-video" controls poster="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=800&q=80">
+                                <source src="#" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <h3 style="text-align: center; margin-top: 1rem;">Земляные работы</h3>
+                        </div>
+                        <div class="carousel-slide">
+                            <video class="carousel-video" controls poster="https://images.unsplash.com/photo-1558618047-30c2f3dc5a47?auto=format&fit=crop&w=800&q=80">
+                                <source src="#" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <h3 style="text-align: center; margin-top: 1rem;">Прокладка коммуникаций</h3>
+                        </div>
+                        <div class="carousel-slide">
+                            <video class="carousel-video" controls poster="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80">
+                                <source src="#" type="video/mp4">
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                            <h3 style="text-align: center; margin-top: 1rem;">Благоустройство</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <div class="carousel-dot active" onclick="currentSlide(1)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(2)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(3)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(4)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(5)"></div>
+                </div>
+                
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem;">
+                    <button onclick="previousSlide()" class="btn-outline">
+                        <i data-lucide="chevron-left"></i>
+                        Предыдущее
+                    </button>
+                    <button onclick="nextSlide()" class="btn-outline">
+                        Следующее
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section id="partners" class="section">
+    <section id="partners" class="section section-alt">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
-                <h2>Наши Партнеры</h2>
-                <p style="font-size: 1.125rem; color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">
-                    Мы сотрудничаем с ведущими строительными компаниями и застройщиками Казахстана
+                <h2>Наши партнеры</h2>
+                <p style="font-size: 1.25rem; color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">
+                    Работаем с ведущими компаниями Казахстана
                 </p>
             </div>
-            <div style="display: flex; justify-content: center;">
-                <div class="card text-center" style="max-width: 300px; padding: 2rem;">
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="width: 100px; height: 100px; background: white; border-radius: 0.5rem; margin: 0 auto; display: flex; align-items: center; justify-content: center; padding: 0.5rem;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/New_Logo_BI_Group.png" alt="BI Group Logo" style="width: 100%; height: 100%; object-fit: contain;">
-                        </div>
-                    </div>
-                    <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">BI Group</h3>
-                    <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground));">Стратегический партнер</p>
+            <div style="display: flex; justify-content: center; align-items: center; max-width: 800px; margin: 0 auto;">
+                <div class="card text-center" style="background: white; padding: 2rem; border-radius: 1rem;">
+                    <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/35/New_Logo_BI_Group.png?20181022115028" 
+                        alt="BI Group" 
+                        style="height: 80px; width: auto; margin: 0 auto;"
+                    />
+                    <h3 style="margin-top: 1rem; font-size: 1.25rem;">BI Group</h3>
+                    <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">Стратегический партнер</p>
                 </div>
-            </div>
-            <div class="text-center" style="margin-top: 3rem;">
-                <p class="text-muted">
-                    Более <span style="font-weight: 700; color: hsl(var(--primary));">50+ успешных проектов</span> реализовано совместно с партнерами
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Contacts Section -->
-    <section id="contacts" class="section section-alt">
+    <!-- Contact Section -->
+    <section id="contacts" class="section">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
                 <h2>Контакты</h2>
                 <p style="font-size: 1.25rem; color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">
-                    Свяжитесь с нами для получения консультации и расчета стоимости работ
+                    Свяжитесь с нами для обсуждения вашего проекта
                 </p>
             </div>
-            <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto; align-items: start;">
-                <!-- Contact Form -->
-                <div class="card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Оставить заявку</h3>
-                    <form style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div class="grid grid-2" style="gap: 1rem;">
-                            <div>
-                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Имя *</label>
-                                <input type="text" placeholder="Ваше имя" style="width: 100%; padding: 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.5rem;">
-                            </div>
-                            <div>
-                                <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Телефон *</label>
-                                <input type="tel" placeholder="+7 (___) ___-__-__" style="width: 100%; padding: 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.5rem;">
-                            </div>
-                        </div>
-                        <div>
-                            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Email</label>
-                            <input type="email" placeholder="your@email.com" style="width: 100%; padding: 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.5rem;">
-                        </div>
-                        <div>
-                            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Услуга</label>
-                            <input type="text" placeholder="Какая услуга вас интересует?" style="width: 100%; padding: 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.5rem;">
-                        </div>
-                        <div>
-                            <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Сообщение</label>
-                            <textarea placeholder="Опишите ваш проект подробнее..." rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.5rem; resize: vertical;"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-                            Отправить заявку
-                        </button>
-                        <p style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); text-align: center;">
-                            Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                        </p>
-                    </form>
-                </div>
-
-                <!-- Contact Information -->
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <div class="card">
-                        <div style="display: flex; align-items: start; gap: 1rem;">
-                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 0.5rem;">
+            
+            <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto; gap: 3rem;">
+                <div>
+                    <h3 style="margin-bottom: 2rem;">Контактная информация</h3>
+                    <div class="grid" style="gap: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; flex-shrink: 0;">
                                 <i data-lucide="map-pin" style="width: 1.5rem; height: 1.5rem; color: hsl(var(--primary));"></i>
                             </div>
                             <div>
-                                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Адрес</h3>
-                                <p class="text-muted">г. Алматы, Райымбек батыр 375 д</p>
-                                <p class="text-muted">Казахстан</p>
+                                <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Адрес</h4>
+                                <p class="text-muted">г. Алматы, ул. Райымбек 375Д, Казахстан</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <div style="display: flex; align-items: start; gap: 1rem;">
-                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 0.5rem;">
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; flex-shrink: 0;">
                                 <i data-lucide="phone" style="width: 1.5rem; height: 1.5rem; color: hsl(var(--primary));"></i>
                             </div>
                             <div>
-                                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Телефон</h3>
-                                <p class="text-muted">+77071117425</p>
+                                <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Телефон</h4>
+                                <p class="text-muted">
+                                    <a href="tel:+77071117425" style="color: hsl(var(--primary)); text-decoration: none;">+7 707 111 74 25</a>
+                                </p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <div style="display: flex; align-items: start; gap: 1rem;">
-                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 0.5rem;">
-                                <i data-lucide="mail" style="width: 1.5rem; height: 1.5rem; color: hsl(var(--primary));"></i>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; flex-shrink: 0;">
+                                <i data-lucide="message-circle" style="width: 1.5rem; height: 1.5rem; color: hsl(var(--primary));"></i>
                             </div>
                             <div>
-                                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Email</h3>
-                                <p class="text-muted">info@bekzatkts.kz</p>
-                                <p class="text-muted">order@bekzatkts.kz</p>
+                                <h4 style="font-weight: 600; margin-bottom: 0.25rem;">WhatsApp</h4>
+                                <p class="text-muted">
+                                    <a href="https://wa.link/gkiud2" target="_blank" style="color: hsl(var(--primary)); text-decoration: none;">Написать в WhatsApp</a>
+                                </p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <div style="display: flex; align-items: start; gap: 1rem;">
-                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 0.5rem;">
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="padding: 0.75rem; background: hsl(var(--primary) / 0.1); border-radius: 50%; flex-shrink: 0;">
                                 <i data-lucide="clock" style="width: 1.5rem; height: 1.5rem; color: hsl(var(--primary));"></i>
                             </div>
                             <div>
-                                <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Режим работы</h3>
-                                <p class="text-muted">Пн-Пт: 8:00 - 18:00</p>
-                                <p class="text-muted">Сб: 9:00 - 15:00</p>
+                                <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Время работы</h4>
+                                <p class="text-muted">Пн-Пт: 9:00-18:00<br>Сб: 9:00-15:00</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- CTA Card -->
-                    <div style="background: var(--gradient-primary); color: white; padding: 2rem; border-radius: 0.75rem; text-align: center; box-shadow: var(--shadow-construction);">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
-                            Готовы начать ваш проект?
-                        </h3>
-                        <p style="margin-bottom: 1.5rem; opacity: 0.9;">
-                            Получите бесплатную консультацию и расчет стоимости работ
-                        </p>
-                        <a href="tel:+77071117425" style="border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
-                            <i data-lucide="phone" style="width: 1rem; height: 1rem;"></i>
-                            Позвонить сейчас
+                </div>
+                
+                <div class="card" style="background: var(--gradient-primary); color: white; text-align: center;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <i data-lucide="phone-call" style="width: 3rem; height: 3rem; color: white; margin: 0 auto;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; color: white;">Нужна консультация?</h3>
+                    <p style="margin-bottom: 2rem; opacity: 0.9;">
+                        Позвоните нам прямо сейчас или напишите в WhatsApp для получения бесплатной консультации
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="tel:+77071117425" class="btn-outline" style="border-color: white; color: white; justify-content: center;">
+                            <i data-lucide="phone"></i>
+                            Позвонить
+                        </a>
+                        <a href="https://wa.link/gkiud2" target="_blank" class="btn-outline" style="border-color: white; color: white; justify-content: center;">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp
                         </a>
                     </div>
                 </div>
@@ -657,38 +712,39 @@
     <!-- Footer -->
     <footer style="background: hsl(var(--foreground)); color: white; padding: 3rem 0 1rem;">
         <div class="container">
-            <div class="grid grid-3" style="margin-bottom: 2rem;">
+            <div class="grid grid-2" style="margin-bottom: 2rem;">
                 <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: hsl(var(--accent));">
-                        BEKZAT KAZ TRANS SERVICE
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: hsl(var(--primary));">
+                        BEKZAT KAZ TRANS SERVISE
                     </h3>
                     <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
-                        Строительные работы любой сложности с использованием современной техники. 
-                        11+ лет надежной работы в Казахстане.
+                        Профессиональные строительные услуги с использованием современной техники. 
+                        Качество, надежность, соблюдение сроков.
                     </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="tel:+77071117425" style="color: hsl(var(--primary)); text-decoration: none;">
+                            <i data-lucide="phone" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </a>
+                        <a href="https://wa.link/gkiud2" target="_blank" style="color: hsl(var(--primary)); text-decoration: none;">
+                            <i data-lucide="message-circle" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </a>
+                    </div>
                 </div>
                 <div>
-                    <h4 style="font-weight: 600; margin-bottom: 1rem;">Услуги</h4>
-                    <ul style="list-style: none; color: rgba(255,255,255,0.8); line-height: 1.8;">
-                        <li>Разработка котлованов</li>
-                        <li>Асфальтирование дорог</li>
-                        <li>Земельные работы</li>
-                        <li>Благоустройство территорий</li>
-                        <li>Водопровод и канализация</li>
-                        <li>Наружные сети</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-weight: 600; margin-bottom: 1rem;">Контакты</h4>
-                    <div style="color: rgba(255,255,255,0.8); line-height: 1.8;">
-                        <p>г. Алматы, Райымбек батыр 375 д</p>
-                        <p>+77071117425</p>
-                        <p>info@bekzatkts.kz</p>
+                    <h4 style="font-weight: 600; margin-bottom: 1rem;">Быстрые ссылки</h4>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <a href="#about" style="color: rgba(255,255,255,0.8); text-decoration: none;">О нас</a>
+                        <a href="#services" style="color: rgba(255,255,255,0.8); text-decoration: none;">Услуги</a>
+                        <a href="#equipment" style="color: rgba(255,255,255,0.8); text-decoration: none;">Техника</a>
+                        <a href="#portfolio" style="color: rgba(255,255,255,0.8); text-decoration: none;">Объекты</a>
+                        <a href="#contacts" style="color: rgba(255,255,255,0.8); text-decoration: none;">Контакты</a>
                     </div>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.6);">
-                <p>&copy; 2024 BEKZAT KAZ TRANS SERVICE. Все права защищены.</p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; text-align: center;">
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                    © 2024 BEKZAT KAZ TRANS SERVISE. Все права защищены.
+                </p>
             </div>
         </div>
     </footer>
@@ -696,6 +752,46 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+        
+        // Carousel functionality
+        let currentSlideIndex = 1;
+        const totalSlides = 5;
+        
+        function showSlide(n) {
+            const container = document.getElementById('carouselContainer');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            if (n > totalSlides) { currentSlideIndex = 1 }
+            if (n < 1) { currentSlideIndex = totalSlides }
+            
+            // Move carousel
+            const translateX = -(currentSlideIndex - 1) * 20;
+            container.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlideIndex - 1].classList.add('active');
+        }
+        
+        function currentSlide(n) {
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+        }
+        
+        function nextSlide() {
+            currentSlideIndex++;
+            showSlide(currentSlideIndex);
+        }
+        
+        function previousSlide() {
+            currentSlideIndex--;
+            showSlide(currentSlideIndex);
+        }
+        
+        // Auto-play carousel
+        setInterval(() => {
+            nextSlide();
+        }, 10000);
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -709,12 +805,6 @@
                     });
                 }
             });
-        });
-
-        // Simple form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
         });
     </script>
 </body>
