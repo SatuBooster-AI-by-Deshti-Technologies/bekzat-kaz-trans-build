@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BEKZAT KAZ TRANS SERVISE - Строительные услуги в Алматы | Земельные работы, асфальтирование, водопровод</title>
@@ -107,14 +107,2189 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-11091763515');
     </script>
 
-  </head>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Color system */
+            --primary: 120 100% 25%;
+            --primary-foreground: 0 0% 100%;
+            --primary-glow: 120 80% 30%;
+            
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            
+            --accent: 120 60% 35%;
+            --accent-foreground: 222.2 47.4% 11.2%;
+            
+            --border: 214.3 31.8% 91.4%;
+            
+            /* Gradients */
+            --gradient-hero: linear-gradient(135deg, hsl(120 100% 25% / 0.9), hsl(120 80% 30% / 0.8));
+            --gradient-section: linear-gradient(180deg, hsl(0 0% 99%), hsl(210 40% 98%));
+            
+            /* Shadows */
+            --shadow-construction: 0 10px 30px -10px hsl(120 100% 25% / 0.3);
+            --shadow-card: 0 4px 20px -4px hsl(222.2 84% 4.9% / 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+        }
+        
+        .bg-gradient-hero {
+            background: var(--gradient-hero);
+        }
+        
+        .bg-gradient-section {
+            background: var(--gradient-section);
+        }
+        
+        .shadow-construction {
+            box-shadow: var(--shadow-construction);
+        }
+        
+        .shadow-card-custom {
+            box-shadow: var(--shadow-card);
+        }
+        
+        .text-primary {
+            color: hsl(var(--primary));
+        }
+        
+        .text-primary-foreground {
+            color: hsl(var(--primary-foreground));
+        }
+        
+        .text-muted-foreground {
+            color: hsl(var(--muted-foreground));
+        }
+        
+        .text-accent {
+            color: hsl(var(--accent));
+        }
+        
+        .bg-primary {
+            background-color: hsl(var(--primary));
+        }
+        
+        .bg-primary-glow {
+            background-color: hsl(var(--primary-glow));
+        }
+        
+        .bg-muted {
+            background-color: hsl(var(--muted));
+        }
+        
+        .bg-accent {
+            background-color: hsl(var(--accent));
+        }
+        
+        .border-border {
+            border-color: hsl(var(--border));
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Header styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: hsl(var(--background) / 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid hsl(var(--border));
+        }
+        
+        /* Card hover effects */
+        .card {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card);
+        }
+        
+        /* Button styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+        
+        .btn-primary:hover {
+            background-color: hsl(var(--primary-glow));
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: hsl(var(--foreground));
+        }
+        
+        /* Badge styles */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 6px;
+            background: hsl(var(--muted));
+            color: hsl(var(--muted-foreground));
+        }
+        
+        .badge-accent {
+            background: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+        }
+        
+        /* Video carousel styles */
+        .video-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .video-slide {
+            flex: 0 0 33.333%;
+            padding: 0 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .video-slide {
+                flex: 0 0 100%;
+            }
+        }
+        
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .video-slide {
+                flex: 0 0 50%;
+            }
+        }
+        
+        .video-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .video-controls:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .video-controls.prev {
+            left: 10px;
+        }
+        
+        .video-controls.next {
+            right: 10px;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: hsl(var(--background));
+            border-top: 1px solid hsl(var(--border));
+            padding: 16px;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        /* Responsive grid */
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+        
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        @media (min-width: 768px) {
+            .md\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .md\\:grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .md\\:grid-cols-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .lg\\:grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .lg\\:grid-cols-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        /* Spacing utilities */
+        .py-20 {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        .py-12 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+        
+        .mb-16 {
+            margin-bottom: 64px;
+        }
+        
+        .mb-12 {
+            margin-bottom: 48px;
+        }
+        
+        .mb-8 {
+            margin-bottom: 32px;
+        }
+        
+        .mb-6 {
+            margin-bottom: 24px;
+        }
+        
+        .mb-4 {
+            margin-bottom: 16px;
+        }
+        
+        .mb-2 {
+            margin-bottom: 8px;
+        }
+        
+        .space-y-6 > * + * {
+            margin-top: 24px;
+        }
+        
+        .space-y-4 > * + * {
+            margin-top: 16px;
+        }
+        
+        .space-y-3 > * + * {
+            margin-top: 12px;
+        }
+        
+        .space-y-2 > * + * {
+            margin-top: 8px;
+        }
+        
+        /* Typography */
+        .text-5xl {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+        
+        .text-4xl {
+            font-size: 2.25rem;
+            line-height: 1.2;
+        }
+        
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 1.3;
+        }
+        
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+        
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .text-xs {
+            font-size: 0.75rem;
+            line-height: 1.5;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .font-semibold {
+            font-weight: 600;
+        }
+        
+        .font-medium {
+            font-weight: 500;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .leading-tight {
+            line-height: 1.25;
+        }
+        
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        
+        /* Responsive text */
+        @media (min-width: 768px) {
+            .md\\:text-6xl {
+                font-size: 3.75rem;
+            }
+            .md\\:text-5xl {
+                font-size: 3rem;
+            }
+            .md\\:text-2xl {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\\:text-7xl {
+                font-size: 4.5rem;
+            }
+        }
+        
+        /* Flexbox utilities */
+        .flex {
+            display: flex;
+        }
+        
+        .flex-col {
+            flex-direction: column;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .items-start {
+            align-items: flex-start;
+        }
+        
+        .justify-center {
+            justify-content: center;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+        
+        .gap-2 {
+            gap: 8px;
+        }
+        
+        .gap-3 {
+            gap: 12px;
+        }
+        
+        .gap-4 {
+            gap: 16px;
+        }
+        
+        .gap-6 {
+            gap: 24px;
+        }
+        
+        .gap-8 {
+            gap: 32px;
+        }
+        
+        .gap-12 {
+            gap: 48px;
+        }
+        
+        /* Position utilities */
+        .relative {
+            position: relative;
+        }
+        
+        .absolute {
+            position: absolute;
+        }
+        
+        .fixed {
+            position: fixed;
+        }
+        
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .top-0 {
+            top: 0;
+        }
+        
+        .left-0 {
+            left: 0;
+        }
+        
+        .right-0 {
+            right: 0;
+        }
+        
+        .z-10 {
+            z-index: 10;
+        }
+        
+        .z-50 {
+            z-index: 50;
+        }
+        
+        /* Size utilities */
+        .w-full {
+            width: 100%;
+        }
+        
+        .h-full {
+            height: 100%;
+        }
+        
+        .min-h-screen {
+            min-height: 100vh;
+        }
+        
+        .h-16 {
+            height: 64px;
+        }
+        
+        .h-48 {
+            height: 192px;
+        }
+        
+        .h-96 {
+            height: 384px;
+        }
+        
+        .w-16 {
+            width: 64px;
+        }
+        
+        .h-16 {
+            height: 64px;
+        }
+        
+        .w-24 {
+            width: 96px;
+        }
+        
+        .h-24 {
+            height: 96px;
+        }
+        
+        .w-4 {
+            width: 16px;
+        }
+        
+        .h-4 {
+            height: 16px;
+        }
+        
+        .w-5 {
+            width: 20px;
+        }
+        
+        .h-5 {
+            height: 20px;
+        }
+        
+        .w-6 {
+            width: 24px;
+        }
+        
+        .h-6 {
+            height: 24px;
+        }
+        
+        .w-8 {
+            width: 32px;
+        }
+        
+        .h-8 {
+            height: 32px;
+        }
+        
+        .max-w-3xl {
+            max-width: 768px;
+        }
+        
+        .max-w-4xl {
+            max-width: 896px;
+        }
+        
+        .max-w-6xl {
+            max-width: 1152px;
+        }
+        
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Background utilities */
+        .bg-cover {
+            background-size: cover;
+        }
+        
+        .bg-center {
+            background-position: center;
+        }
+        
+        .bg-no-repeat {
+            background-repeat: no-repeat;
+        }
+        
+        /* Border utilities */
+        .border {
+            border-width: 1px;
+        }
+        
+        .border-2 {
+            border-width: 2px;
+        }
+        
+        .border-t {
+            border-top-width: 1px;
+        }
+        
+        .border-b {
+            border-bottom-width: 1px;
+        }
+        
+        .rounded-lg {
+            border-radius: 8px;
+        }
+        
+        .rounded-2xl {
+            border-radius: 16px;
+        }
+        
+        .rounded-full {
+            border-radius: 9999px;
+        }
+        
+        /* Overflow utilities */
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        
+        /* Backdrop utilities */
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px);
+        }
+        
+        /* Object utilities */
+        .object-cover {
+            object-fit: cover;
+        }
+        
+        .object-contain {
+            object-fit: contain;
+        }
+        
+        /* Padding utilities */
+        .p-2 {
+            padding: 8px;
+        }
+        
+        .p-3 {
+            padding: 12px;
+        }
+        
+        .p-4 {
+            padding: 16px;
+        }
+        
+        .p-6 {
+            padding: 24px;
+        }
+        
+        .p-8 {
+            padding: 32px;
+        }
+        
+        .px-4 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        
+        .px-8 {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+        
+        .py-4 {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+        
+        /* Responsive utilities */
+        @media (min-width: 640px) {
+            .sm\\:flex-row {
+                flex-direction: row;
+            }
+            .sm\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .md\\:flex {
+                display: flex;
+            }
+            .md\\:hidden {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\\:flex {
+                display: flex;
+            }
+            .lg\\:hidden {
+                display: none;
+            }
+            .lg\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Hide utilities */
+        .hidden {
+            display: none;
+        }
+        
+        /* Block utilities */
+        .block {
+            display: block;
+        }
+        
+        /* Flex shrink */
+        .flex-shrink-0 {
+            flex-shrink: 0;
+        }
+        
+        /* Margin top */
+        .mt-1 {
+            margin-top: 4px;
+        }
+        
+        .mt-8 {
+            margin-top: 32px;
+        }
+        
+        .mt-12 {
+            margin-top: 48px;
+        }
+        
+        .mr-1 {
+            margin-right: 4px;
+        }
+        
+        .mr-2 {
+            margin-right: 8px;
+        }
+        
+        .ml-1 {
+            margin-left: 4px;
+        }
+        
+        .ml-2 {
+            margin-left: 8px;
+        }
+        
+        /* Width fit */
+        .w-fit {
+            width: fit-content;
+        }
+        
+        /* Padding top */
+        .pt-8 {
+            padding-top: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-primary">
+                        BEKZAT KAZ TRANS SERVISE
+                    </h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#hero" class="font-medium hover-scale">Главная</a>
+                    <a href="#about" class="font-medium hover-scale">О компании</a>
+                    <a href="#services" class="font-medium hover-scale">Услуги</a>
+                    <a href="#equipment" class="font-medium hover-scale">Техника</a>
+                    <a href="#partners" class="font-medium hover-scale">Партнеры</a>
+                    <a href="#contacts" class="font-medium hover-scale">Контакты</a>
+                </nav>
+
+                <!-- Contact Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="tel:+77071117425" class="btn btn-primary">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        +7 707 111 74 25
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    <i data-lucide="x" class="w-6 h-6 hidden" id="close-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobile-menu">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#hero" class="font-medium mobile-nav-link">Главная</a>
+                    <a href="#about" class="font-medium mobile-nav-link">О компании</a>
+                    <a href="#services" class="font-medium mobile-nav-link">Услуги</a>
+                    <a href="#equipment" class="font-medium mobile-nav-link">Техника</a>
+                    <a href="#partners" class="font-medium mobile-nav-link">Партнеры</a>
+                    <a href="#contacts" class="font-medium mobile-nav-link">Контакты</a>
+                    <a href="tel:+77071117425" class="btn btn-primary w-full mt-8">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        +7 (707) 111-74-25
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div 
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style="background-image: url('src/assets/hero-construction.jpg')"
+            ></div>
+            
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-hero"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 container mx-auto px-4 text-center text-white">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    <span class="block">BEKZAT KAZ</span>
+                    <span class="block">TRANS SERVISE</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Строительные работы любой сложности с использованием современной техники
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="tel:+77071117425" class="btn btn-primary">
+                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                        Заказать консультацию
+                    </a>
+                    
+                    <a href="https://wa.link/gkiud2" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        Узнать больше
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="text-2xl font-bold mb-1">11+</div>
+                        <div class="text-sm">Лет опыта</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="text-2xl font-bold mb-1">50+</div>
+                        <div class="text-sm">Единиц техники</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="text-2xl font-bold mb-1">500+</div>
+                        <div class="text-sm">Проектов</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                        <div class="text-2xl font-bold mb-1">100%</div>
+                        <div class="text-sm">Качество</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gradient-section">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                            О компании
+                        </h2>
+                        <div class="space-y-6 text-muted-foreground leading-relaxed">
+                            <p class="text-lg">
+                                Компания <span class="font-semibold text-primary">BEKZAT KAZ TRANS SERVISE</span> – 
+                                это команда профессионалов с многолетним опытом в строительной сфере. 
+                                Мы выполняем работы любой сложности, используя надёжную спецтехнику и 
+                                проверенные технологии.
+                            </p>
+                            <p>
+                                Наши специалисты имеют все необходимые лицензии и сертификаты, 
+                                техника регулярно проходит техническое обслуживание. Мы гордимся тем, 
+                                что реализуем проекты качественно и в срок, помогая создавать прочную и 
+                                надёжную инфраструктуру.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-primary/10 rounded-lg">
+                                <div class="text-2xl font-bold text-primary mb-1">11+</div>
+                                <div class="text-sm text-muted-foreground">Лет на рынке</div>
+                            </div>
+                            <div class="text-center p-4 bg-accent/10 rounded-lg">
+                                <div class="text-2xl font-bold text-accent mb-1">от 7 дней</div>
+                                <div class="text-sm text-muted-foreground">Минимальный срок</div>
+                            </div>
+                        </div>
+                        
+                        <a href="tel:+77071117425" class="btn btn-primary mt-8">
+                            Получить консультацию
+                        </a>
+                    </div>
+                    
+                    <!-- Advantages Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="card group p-6 text-center">
+                            <div class="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit group-hover:bg-primary transition-all duration-300">
+                                <i data-lucide="check-circle" class="h-6 w-6 text-primary group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-sm">
+                                Собственный парк техники
+                            </h3>
+                            <p class="text-xs text-muted-foreground leading-relaxed">
+                                Более 50 единиц современной строительной техники в отличном состоянии
+                            </p>
+                        </div>
+                        
+                        <div class="card group p-6 text-center">
+                            <div class="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit group-hover:bg-primary transition-all duration-300">
+                                <i data-lucide="users" class="h-6 w-6 text-primary group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-sm">
+                                Опытные специалисты
+                            </h3>
+                            <p class="text-xs text-muted-foreground leading-relaxed">
+                                Команда профессионалов с многолетним опытом в строительной сфере
+                            </p>
+                        </div>
+                        
+                        <div class="card group p-6 text-center">
+                            <div class="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit group-hover:bg-primary transition-all duration-300">
+                                <i data-lucide="award" class="h-6 w-6 text-primary group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-sm">
+                                Гарантия качества
+                            </h3>
+                            <p class="text-xs text-muted-foreground leading-relaxed">
+                                Все работы выполняются в соответствии с техническими требованиями и стандартами
+                            </p>
+                        </div>
+                        
+                        <div class="card group p-6 text-center">
+                            <div class="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit group-hover:bg-primary transition-all duration-300">
+                                <i data-lucide="clock" class="h-6 w-6 text-primary group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-sm">
+                                Соблюдение сроков
+                            </h3>
+                            <p class="text-xs text-muted-foreground leading-relaxed">
+                                Точное планирование и контроль выполнения работ в установленные сроки
+                            </p>
+                        </div>
+                        
+                        <div class="card group p-6 text-center">
+                            <div class="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit group-hover:bg-primary transition-all duration-300">
+                                <i data-lucide="shield" class="h-6 w-6 text-primary group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-sm">
+                                Лицензии и сертификаты
+                            </h3>
+                            <p class="text-xs text-muted-foreground leading-relaxed">
+                                Все необходимые разрешительные документы и страхование
+                            </p>
+                        </div>
+                        
+                        <div class="card group p-6 text-center">
+                            <div class="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit group-hover:bg-primary transition-all duration-300">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-primary group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="font-semibold mb-2 text-sm">
+                                Работаем по всему Казахстану
+                            </h3>
+                            <p class="text-xs text-muted-foreground leading-relaxed">
+                                Готовы выполнить проект в любом регионе страны
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gradient-section">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Наши услуги
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Предоставляем полный спектр строительных услуг с гарантией качества и соблюдением сроков
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/excavator.jpg" 
+                                alt="Разработка котлованов"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="shovel" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Разработка котлованов
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Выполняем разработку котлованов под жилые, промышленные и коммерческие объекты с использованием современной спецтехники.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/road-construction.jpg" 
+                                alt="Асфальтирование дорог"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="construction" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Асфальтирование дорог
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Полный цикл работ по укладке асфальта - от подготовки основания до финального покрытия.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/earthworks-new.jpg" 
+                                alt="Земельные работы"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="mountain" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Земельные работы
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Планировка, выемка и отсыпка грунта. Подготовка участков для строительства.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/landscaping.jpg" 
+                                alt="Благоустройство территорий"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="tree-pine" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Благоустройство территорий
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Создание комфортных городских пространств, укладка тротуаров, озеленение.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/water-supply.jpg" 
+                                alt="Водопровод"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="construction" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Водопровод
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Прокладка и монтаж водопроводных сетей для жилых и коммерческих объектов.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/sewerage.jpg" 
+                                alt="Канализация"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="mountain" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Канализация
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Устройство канализационных систем и сетей различной сложности.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card group overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img 
+                                src="src/assets/external-networks.jpg" 
+                                alt="Наружные сети"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <i data-lucide="shovel" class="h-8 w-8 text-accent"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-bold">
+                                    Наружные сети
+                                </h3>
+                                <span class="badge">
+                                    Популярная услуга
+                                </span>
+                            </div>
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                                Прокладка наружных инженерных сетей: электричество, газ, связь.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Наши работы в действии
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Посмотрите как мы выполняем строительные работы профессионально и качественно
+                    </p>
+                </div>
+
+                <div class="max-w-6xl mx-auto">
+                    <div class="video-carousel" id="video-carousel">
+                        <div class="video-track" id="video-track">
+                            <div class="video-slide">
+                                <div class="card group overflow-hidden">
+                                    <div class="relative h-48 overflow-hidden cursor-pointer" onclick="window.open('https://youtube.com/shorts/M-WPYkc6V3c?feature=share', '_blank')">
+                                        <img 
+                                            src="cat1.png"
+                                            alt="Земельные работы - Экскавация котлована"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <div class="w-16 h-16 bg-accent/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                <i data-lucide="play" class="h-6 w-6 text-white ml-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-bold mb-2">
+                                            Земельные работы - Экскавация котлована
+                                        </h3>
+                                        <p class="text-muted-foreground text-sm leading-relaxed">
+                                            Профессиональная разработка котлованов под фундамент
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video-slide">
+                                <div class="card group overflow-hidden">
+                                    <div class="relative h-48 overflow-hidden cursor-pointer" onclick="window.open('https://youtube.com/shorts/GJ0_cFhA_TM?feature=share', '_blank')">
+                                        <img 
+                                            src="cat2.png"
+                                            alt="Земельные работы"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <div class="w-16 h-16 bg-accent/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                <i data-lucide="play" class="h-6 w-6 text-white ml-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-bold mb-2">
+                                            Земельные работы
+                                        </h3>
+                                        <p class="text-muted-foreground text-sm leading-relaxed">
+                                            Качественная укладка разного покрытия
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="video-slide">
+                                <div class="card group overflow-hidden">
+                                    <div class="relative h-48 overflow-hidden cursor-pointer" onclick="window.open('https://youtube.com/shorts/mGMKbxMhNIY?feature=share', '_blank')">
+                                        <img 
+                                            src="cat3.png"
+                                            alt="Прокладка водопровода"
+                                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <div class="w-16 h-16 bg-accent/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                <i data-lucide="play" class="h-6 w-6 text-white ml-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-6">
+                                        <h3 class="text-lg font-bold mb-2">
+                                            Прокладка водопровода
+                                        </h3>
+                                        <p class="text-muted-foreground text-sm leading-relaxed">
+                                            Монтаж современных водопроводных систем
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="video-controls prev" id="prev-btn">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button class="video-controls next" id="next-btn">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="equipment" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Наша техника
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Современный парк строительной техники для выполнения работ любой сложности
+                    </p>
+                </div>
+
+                <!-- Hero Equipment Image -->
+                <div class="relative mb-16 rounded-2xl overflow-hidden">
+                    <img 
+                        src="src/assets/crane.jpg" 
+                        alt="Строительная техника"
+                        class="w-full h-96 object-cover"
+                    />
+                    <div class="absolute inset-0 bg-gradient-hero flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h3 class="text-4xl font-bold mb-4">50+ единиц техники</h3>
+                            <p class="text-xl">Готовы к работе в любое время</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Экскаваторы -->
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="p-2 bg-primary/10 rounded-lg">
+                                    <i data-lucide="cog" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Экскаваторы</h3>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Экскаватор колесный Hitachi W180
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            18т
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Экскаватор колесный W140
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2019
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            14т
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Экскаватор гусеничный Doosan 360
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2021
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            36т
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Грузовая техника -->
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="p-2 bg-primary/10 rounded-lg">
+                                    <i data-lucide="truck" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Грузовая техника</h3>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        КамАЗ самосвал 65115
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020-2023
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            15т
+                                        </span>
+                                        <span class="badge">
+                                            3 шт
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Шахман
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020-2023
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            25т
+                                        </span>
+                                        <span class="badge">
+                                            4 шт
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Трал Мерседес
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2019
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            40т
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Краны и подъемники -->
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="p-2 bg-primary/10 rounded-lg">
+                                    <i data-lucide="construction" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Краны и подъемники</h3>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Кран стрелочный
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020-2021
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            25т
+                                        </span>
+                                        <span class="badge">
+                                            3 шт
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Кран Sunny
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2022
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            25т
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Погрузчики -->
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="p-2 bg-primary/10 rounded-lg">
+                                    <i data-lucide="cog" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Погрузчики</h3>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Погрузчик фронтальный
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020-2024
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            3 куб
+                                        </span>
+                                        <span class="badge">
+                                            2 шт
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Погрузчик фронтальный
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020-2021
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            2 куб
+                                        </span>
+                                        <span class="badge">
+                                            2 шт
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Погрузчик-экскаватор 3в1
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2014
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            универсальный
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Дополнительное оборудование -->
+                    <div class="card">
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="p-2 bg-primary/10 rounded-lg">
+                                    <i data-lucide="cog" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <h3 class="text-xl font-bold">Дополнительное оборудование</h3>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Воздушный компрессор Kaeser M50
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2021
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            высокой мощности
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-muted/50 rounded-lg p-4">
+                                    <h4 class="font-semibold mb-2">
+                                        Грунтовый каток
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">
+                                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i>
+                                            2020-2023
+                                        </span>
+                                        <span class="badge badge-accent">
+                                            16-20т
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Наши объекты
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Реализованные проекты различной сложности по всему Казахстану
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="hospital" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            Инфекционный госпиталь
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Специализированная клиника COVID-19
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="hospital" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            Модульный инфекционный госпиталь в Туркестане
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Модульное медицинское учреждение
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="graduation-cap" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            Школа Дархан
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Образовательное учреждение
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="building" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            КБТУ
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Университет
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="graduation-cap" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            Школа Кемертоган
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Образовательное учреждение
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="graduation-cap" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            Школа Каскелен
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Образовательное учреждение
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="graduation-cap" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            Школа Узынагаш
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Образовательное учреждение
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="graduation-cap" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            НИШ Алатауский (Алатауский район)
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Назарбаев Интеллектуальная школа
+                        </p>
+                    </div>
+
+                    <div class="card group p-6 text-center">
+                        <div class="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                            <i data-lucide="graduation-cap" class="h-8 w-8 text-primary group-hover:text-primary-foreground"></i>
+                        </div>
+                        <h3 class="font-bold mb-2 text-lg leading-tight">
+                            НИШ Наурызбайский (Наурызбайский район)
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Назарбаев Интеллектуальная школа
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-muted-foreground">
+                        Более <span class="font-bold text-primary">50+ успешных проектов</span> реализовано за 11+ лет работы
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" class="py-20 bg-gradient-section">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">
+                        Наши Партнеры
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Мы сотрудничаем с ведущими строительными компаниями и застройщиками Казахстана
+                    </p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="card p-8 text-center max-w-sm">
+                        <div class="mb-6">
+                            <div class="w-24 h-24 bg-white rounded-lg mx-auto flex items-center justify-center mb-4 p-2">
+                                <img 
+                                    src="src/assets/bi-group-logo.png" 
+                                    alt="BI Group Logo" 
+                                    class="w-full h-full object-contain"
+                                />
+                            </div>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            BI Group
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            Стратегический партнер
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-muted-foreground">
+                        Более <span class="font-bold text-primary">50+ успешных проектов</span> реализовано совместно с партнерами
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacts" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Свяжитесь с нами
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        Готовы обсудить ваш проект и предложить лучшее решение
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <div class="card p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 rounded-lg">
+                                    <i data-lucide="map-pin" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-2">Адрес</h3>
+                                    <p class="text-muted-foreground">
+                                        г. Алматы, ул. Райымбек 375Д<br />
+                                        Казахстан
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 rounded-lg">
+                                    <i data-lucide="phone" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-2">Телефон</h3>
+                                    <p class="text-muted-foreground">
+                                        <a href="tel:+77071117425" class="hover:text-primary">+7 (707) 111-74-25</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 rounded-lg">
+                                    <i data-lucide="mail" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-2">Email</h3>
+                                    <p class="text-muted-foreground">
+                                        <a href="mailto:office@deshti.kz" class="hover:text-primary">office@deshti.kz</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 rounded-lg">
+                                    <i data-lucide="clock" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-2">Режим работы</h3>
+                                    <p class="text-muted-foreground">
+                                        Пн-Пт: 8:00 - 22:00<br />
+                                        Сб: 8:00 - 22:00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="https://wa.link/gkiud2" target="_blank" rel="noopener noreferrer" class="btn btn-primary inline-flex items-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Написать в WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="card p-8">
+                        <h3 class="text-2xl font-bold mb-6">Заказать звонок</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Имя</label>
+                                <input type="text" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Ваше имя">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Телефон</label>
+                                <input type="tel" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Сообщение</label>
+                                <textarea rows="4" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Опишите ваш проект"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-foreground text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-accent mb-4">
+                        BEKZAT KAZ TRANS SERVISE
+                    </h3>
+                    <p class="text-white/80 mb-4 leading-relaxed">
+                        Профессиональные строительные работы любой сложности с использованием 
+                        современной техники по всему Казахстану.
+                    </p>
+                    <div class="text-sm text-white/60">
+                        © 2025 Deshti Technologies
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-accent">Услуги</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Разработка котлованов</li>
+                        <li>Асфальтирование дорог</li>
+                        <li>Земельные работы</li>
+                        <li>Благоустройство территорий</li>
+                        <li>Прочие строительные работы</li>
+                    </ul>
+                </div>
+
+                <!-- Equipment -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-accent">Техника</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Экскаваторы и погрузчики</li>
+                        <li>Краны и подъемники</li>
+                        <li>Самосвалы и тралы</li>
+                        <li>Компрессоры и катки</li>
+                        <li>Дорожная техника</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-accent">Контакты</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="h-4 w-4 text-accent mt-1 flex-shrink-0"></i>
+                            <div class="text-white/80 text-sm">
+                                г. Алматы, ул. Райымбек 375Д<br />
+                                Казахстан
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="phone" class="h-4 w-4 text-accent flex-shrink-0"></i>
+                            <div class="text-white/80 text-sm">
+                                +7 (707) 111-74-25
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="mail" class="h-4 w-4 text-accent flex-shrink-0"></i>
+                            <div class="text-white/80 text-sm">
+                                office@deshti.kz
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-2">
+                            <i data-lucide="clock" class="h-4 w-4 text-accent mt-1 flex-shrink-0"></i>
+                            <div class="text-white/80 text-sm">
+                                Пн-Пт: 8:00 - 22:00<br />
+                                Сб: 8:00 - 22:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-white/60 text-sm">
+                        Все права защищены.
+                    </div>
+                    <div class="text-white/60 text-sm">
+                        Работаем по всему Казахстану
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on nav links
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Video carousel functionality
+        let currentVideoIndex = 0;
+        const videoTrack = document.getElementById('video-track');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const totalVideos = 3;
+
+        function getVisibleVideos() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
+        function updateCarousel() {
+            const visibleVideos = getVisibleVideos();
+            const maxIndex = Math.max(0, totalVideos - visibleVideos);
+            
+            if (currentVideoIndex > maxIndex) {
+                currentVideoIndex = maxIndex;
+            }
+            
+            const translateX = -(currentVideoIndex * (100 / visibleVideos));
+            videoTrack.style.transform = `translateX(${translateX}%)`;
+            
+            prevBtn.style.display = currentVideoIndex > 0 ? 'flex' : 'none';
+            nextBtn.style.display = currentVideoIndex < maxIndex ? 'flex' : 'none';
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentVideoIndex > 0) {
+                currentVideoIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const visibleVideos = getVisibleVideos();
+            const maxIndex = Math.max(0, totalVideos - visibleVideos);
+            if (currentVideoIndex < maxIndex) {
+                currentVideoIndex++;
+                updateCarousel();
+            }
+        });
+
+        // Auto-play carousel
+        setInterval(() => {
+            const visibleVideos = getVisibleVideos();
+            const maxIndex = Math.max(0, totalVideos - visibleVideos);
+            
+            if (currentVideoIndex < maxIndex) {
+                currentVideoIndex++;
+            } else {
+                currentVideoIndex = 0;
+            }
+            updateCarousel();
+        }, 5000);
+
+        // Handle window resize
+        window.addEventListener('resize', updateCarousel);
+
+        // Initialize carousel
+        updateCarousel();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = 64; // Height of fixed header
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const name = formData.get('name') || this.querySelector('input[type="text"]').value;
+                const phone = formData.get('phone') || this.querySelector('input[type="tel"]').value;
+                const message = formData.get('message') || this.querySelector('textarea').value;
+                
+                // Create WhatsApp message
+                const whatsappMessage = `Здравствуйте! Меня зовут ${name}. ${message}. Мой номер: ${phone}`;
+                const whatsappUrl = `https://wa.me/77071117425?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                // Open WhatsApp
+                window.open(whatsappUrl, '_blank');
+                
+                // Reset form
+                this.reset();
+                
+                alert('Спасибо за обращение! Вы будете перенаправлены в WhatsApp.');
+            });
+        }
+    </script>
+</body>
 </html>
